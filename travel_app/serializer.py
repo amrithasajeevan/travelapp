@@ -39,3 +39,9 @@ class userregserializer(serializers.ModelSerializer):
 class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField(style={'input_type': 'password'})
+
+class FeedbackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = feedback
+        fields = ['username', 'title', 'message', 'date']
+        read_only_fields = ['date']

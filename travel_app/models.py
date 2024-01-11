@@ -47,3 +47,9 @@ class userreg(models.Model):
     phone_no=models.IntegerField()
     email=models.EmailField()
     password=models.CharField(max_length=50)
+
+class feedback(models.Model):
+    username=models.CharField(max_length=100)
+    title=models.CharField(max_length=100)
+    message=models.TextField()
+    date=models.DateTimeField(auto_now_add=True)
